@@ -1,37 +1,61 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.15">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>🍽 오늘의 음식 밸런스 게임</title>
   <style>
+    :root {
+      --main-color: #ffaf2e;
+      --hover-color: #ff9300;
+      --bg-color: #fffaf4;
+      --text-color: #333;
+    }
+
     body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-color);
+      color: var(--text-color);
       font-family: 'Arial', sans-serif;
-      background-color: #fffaf4;
-      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding: 5vh 5vw;
+      box-sizing: border-box;
       text-align: center;
-      padding: 50px;
     }
+
     h1 {
-      font-size: 2rem;
-      margin-bottom: 30px;
+      font-size: 6vw;
+      margin-bottom: 5vh;
+      word-break: keep-all;
     }
+
     #balance {
-      font-size: 1.4rem;
-      margin: 30px 0;
+      font-size: 4.8vw;
+      line-height: 1.6;
+      margin: 4vh 0;
       min-height: 3em;
-      line-height: 1.8;
+      max-width: 90vw;
+      word-break: keep-all;
     }
+
     button {
-      background-color: #ffaf2e;
+      background-color: var(--main-color);
+      color: white;
       border: none;
-      padding: 10px 20px;
-      font-size: 1rem;
-      border-radius: 10px;
+      padding: 3vh 6vw;
+      font-size: 4.5vw;
+      border-radius: 12px;
       cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
     }
+
     button:hover {
-      background-color: #ff9300;
+      background-color: var(--hover-color);
     }
   </style>
 </head>
