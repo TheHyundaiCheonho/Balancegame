@@ -43,6 +43,12 @@
       word-break: keep-all;
     }
 
+    .balance-line {
+      display: block;
+      margin: 1vh 0;
+      text-align: center;
+    }
+
     button {
       background-color: var(--main-color);
       color: white;
@@ -88,7 +94,13 @@
 
     function showBalance() {
       const random = balances[Math.floor(Math.random() * balances.length)];
-      document.getElementById("balance").innerText = random;
+      const [optionA, optionB] = random.split(" vs ");
+      const formatted = `
+        <span class="balance-line">${optionA}</span>
+        <span class="balance-line">vs</span>
+        <span class="balance-line">${optionB}</span>
+      `;
+      document.getElementById("balance").innerHTML = formatted;
     }
 
     showBalance();
